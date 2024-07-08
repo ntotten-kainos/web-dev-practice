@@ -24,6 +24,6 @@ app.listen(3000, () => {
 });
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const names = ['Gerard', 'Nathan', 'Dan'];
-    res.render('index.html');
+    res.render('index.html', { names });
 }));
 //# sourceMappingURL=app.js.map
