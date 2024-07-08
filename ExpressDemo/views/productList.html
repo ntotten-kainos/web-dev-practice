@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h2>A List of All Products</h2>
+    <table>
+        <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+        </tr>
+        {% for product in products | sort(attribute='productID') %}
+        <tr>
+            <td>{{ product.productID }}</td>
+            <td>{{ product.productName }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
