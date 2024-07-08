@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nathan Totten <nathan.totten@kainos.com>",
   "license": "ISC",
   "description": "",
   "dependencies": {
