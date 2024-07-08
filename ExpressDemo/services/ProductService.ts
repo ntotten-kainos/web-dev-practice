@@ -10,3 +10,13 @@ export const getProducts = async (): Promise<Product[]> => {
         throw new Error('Failed to get products');
     }
 }
+
+export const getProductByID = async (id: String): Promise<Product> => {
+    try {
+        const response: AxiosResponse = await axios.get("http://localhost:8080/product-api/" + id);
+        return response.data;
+    } catch (e) {
+        console.log(e);
+        throw new Error('Failed to get product');
+    }
+}

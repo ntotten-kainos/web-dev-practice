@@ -3,7 +3,7 @@ import nunjucks from "nunjucks";
 
 import { getAllOrders, getSingleOrder } from "../controllers/OrderController"
 import { dateFilter } from "../filters/DateFilters"
-import { getAllProducts } from "../controllers/ProductController"
+import { getAllProducts, getSingleProduct } from "../controllers/ProductController"
 
 const app = express();
 
@@ -28,3 +28,5 @@ app.get('/orders', getAllOrders)
 app.get('/orders/:id', getSingleOrder)
 
 app.get('/products', getAllProducts)
+
+app.get('/products/:id', getSingleProduct)
