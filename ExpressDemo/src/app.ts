@@ -13,6 +13,6 @@ app.listen(3000, () => {
 });
 
 app.get('/', async (req: express.Request, res: express.Response) => {
-    const names: string[] = ['Gerard', 'Nathan', 'Dan'];
+    const names: string[] = ['Gerard', 'Nathan', 'Dan', 'John'];
     res.render('index.html', { names });
 });
