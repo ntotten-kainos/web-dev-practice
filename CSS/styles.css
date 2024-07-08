@@ -45,29 +45,88 @@ nav li {
 table {
     padding:  10px;
     width: 50%;
+    justify-content: space-evenly;
+}
+
+th {
+    background-color: var(--accent-2);
 }
 
 form {
     padding: 5px;
+}
+
+label {
+    padding: 5px;
+}
+
+input, textarea {
+    width:50%;
     display: flex;
-    align-items: center;
-}
-
-form label {
-    padding: 5px;
-}
-
-form input {
-    padding: 5px;
+    padding: 10px;
 }
 
 form button {
-    background-color: var(--accent-2);
+    color: var(--secondary-text);
+    width: 50%;
+    background-color: var(--accent-1);
     border: 5px;
     border-radius: 10px;
     padding: 5px;
 }
 
 form button:hover {
-    background-color: var(--accent-1);
+    background-color: var(--accent-2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    padding: 5px;
+}
+
+#content h3 {
+    padding: 5px;
+}
+
+#weeks {
+    padding: 10px;
+    justify-content: left;
+}
+
+#weeks {
+    padding: 5px;
+    list-style: none;
+}
+
+#weeks ul {
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--accent-2);
+    color: var(--primary-text);
+    border-bottom: 5px;
+}
+
+.week-items ul {
+    list-style: decimal;
+}
+
+.week-items li {
+    padding: 5px;
+}
+
+#kainos-img {
+    border-radius: 5px;
+    height: 50px;
+    opacity: 85%;
+}
+
+#logo-div {
+    background-color: var(--secondary-text);
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 95%;
 }

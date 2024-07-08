@@ -11,6 +11,9 @@
 <body>
     <header>
         <h1>Nathan's Super Cool Academy Website</h1>
+        <div id="logo-div">
+            <img src="../images/kainos.webp" alt="Kainos logo" id="kainos-img">
+        </div>
         <nav>
             <li><a href=#schedule>Schedule</a></li>
             <li><a href=#content>Content</a></li>
@@ -18,6 +21,7 @@
         </nav>
     </header>
     <main>
+    
         <section id="schedule">
             <h2>Academy Scehdule</h2>
         <table>
@@ -36,29 +40,71 @@
               <td>REST APIs</td>
               <td>Belfast/Hybrid</td>
             </tr>
+            <tr>
+                <td>Week 3</td>
+                <td>Web Development</td>
+                <td>Belfast/Hybrid</td>
+            </tr>
           </table>
         </section>
         <section id="content">
             <h2>Academy Content</h2>
-            <ul>
-                <li>
-
+            <ul id="weeks">
+                <li class="week-items">
+                    <h3>Week 1</h3>
+                    <p>An overview of MySQL Databases and integrations with Java</p>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Flyway automated database migrations</li>
+                        <li>Integrating a MySQL database with a basic Java app</li>
+                    </ul>
+                </li>
+                <li class="week-items">
+                    <h3>Week 2</h3>
+                    <p>An intro to REST API development</p>
+                    <ul>
+                        <li>Dropwizard</li>
+                        <li>REST API practices</li>
+                        <li>SOLID Principles</li>
+                        <li>Swagger API Testing</li>
+                    </ul>
+                </li>
+                <li class="week-items">
+                    <h3>Week 3
+                    </h3>
+                    <p>Web Development</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>Accessibility</li>
+                        <li>GOV.UK Design Standards</li>
+                    </ul>
                 </li>
             </ul>
         </section>
         <section id="review">
             <h2>Leave us a review!</h2>
             <p>How did you find the academy? Let us know below.</p>
-            <form>
-                <label for="name">Your Name: </label>
-                <input type="text" name="name" id="name" required>
-                <label for="email">Your Email: </label>
-                <input type="email" name="email" id="email" required>
-                <label for="message">Your Message: </label>
-                <textarea name="message" id="message" required>
-                </textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div>
+                <form>
+                    <div>
+                        <label for="name">Your Name: </label>
+                        <input type="text" name="name" id="name" required><br>
+                    </div>
+                    <div>
+                        <label for="email">Your Email: </label>
+                        <input type="email" name="email" id="email" required><br>
+                    </div>
+                    <div>
+                        <label for="message">Your Message: </label>
+                        <textarea name="message" id="message" required></textarea><br>
+                    </div>    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        
         </section>
     </main>
     <footer><p>&copy; Nathan's Academy Site</p></footer>
