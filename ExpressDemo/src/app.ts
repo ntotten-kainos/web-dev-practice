@@ -1,7 +1,6 @@
 import { getCustomerByID, getCustomerForm, getCustomers, postCustomerForm } from './../controllers/CustomerController';
 import express from "express";
 import nunjucks from "nunjucks";
-//import bodyParser from "body-parser";
 
 import { getAllOrders, getSingleOrder, getOrderForm, postOrderForm } from "../controllers/OrderController"
 import { dateFilter } from "../filters/DateFilters"
