@@ -1,5 +1,5 @@
 import express from "express";
-import { getProducts, getProductByID } from "../services/ProductService";
+import { getProducts, getProductByID, createProduct } from "../services/ProductService";
 
 
 export const getAllProducts = async (req:express.Request, res:express.Response) : Promise<void> => {
@@ -12,4 +12,14 @@ export const getSingleProduct = async (req:express.Request, res:express.Response
 
 export const getProductForm = async (req:express.Request, res:express.Response) : Promise<void> => {
     res.render('productForm.html')
+}
+
+export const postProductForm = async (req:express.Request, res:express.Response) : Promise<void> => {
+    try {
+        const id = await createProduct(req.body);
+        res.redirect('/products/' + id);
+    } catch(e) {
+        res.locals.errormessage = e.message;
+        res.render('productForm.html', req.body);
+    }
 }
