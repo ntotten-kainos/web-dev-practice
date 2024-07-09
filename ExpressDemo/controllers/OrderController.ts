@@ -1,5 +1,6 @@
 import express from "express";
 import { getOrders, getOrderByID, createOrder } from "../services/OrderService";
+import { getAllCustomers } from "../services/CustomerService";
 
 
 export const getAllOrders = async (req:express.Request, res:express.Response) : Promise<void> => {
@@ -11,7 +12,7 @@ export const getSingleOrder = async (req:express.Request, res:express.Response) 
 }
 
 export const getOrderForm = async (req:express.Request, res:express.Response) : Promise<void> => {
-    res.render('orderForm.html')
+    res.render('orderForm.html', {customers:await getAllCustomers()})
 }
 
 export const postOrderForm = async (req:express.Request, res:express.Response) : Promise<void> => {

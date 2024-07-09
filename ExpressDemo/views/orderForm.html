@@ -10,9 +10,13 @@
     <form class="form" action="/orderForm" method="post">
 
         <h3>
-            <label for="customerID">Customer ID</label>
+            <label for="customerID">Customer</label>
         </h3>
-        <input type="number" name="customerID" id="customerID" value="{{ customerID }}">
+        <select name="customerID" id="customerID">
+            {% for customer in customers %}
+            <option value="{{customer.customerID}}">{{customer.customerName}}</option>
+            {% endfor %}
+        </select>
 
         <h3>
             <label for="orderDate">Order Date</label>

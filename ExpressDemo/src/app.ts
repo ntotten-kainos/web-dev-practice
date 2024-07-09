@@ -1,3 +1,4 @@
+import { getCustomers } from './../controllers/CustomerController';
 import express from "express";
 import nunjucks from "nunjucks";
 //import bodyParser from "body-parser";
@@ -5,7 +6,6 @@ import nunjucks from "nunjucks";
 import { getAllOrders, getSingleOrder, getOrderForm, postOrderForm } from "../controllers/OrderController"
 import { dateFilter } from "../filters/DateFilters"
 import { getAllProducts, getProductForm, getSingleProduct, postProductForm } from "../controllers/ProductController"
-
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -35,7 +35,10 @@ app.get('/orders', getAllOrders)
 app.get('/orderForm', getOrderForm)
 app.post('/orderForm', postOrderForm)
 app.get('/orders/:id', getSingleOrder)
+
 app.get('/products', getAllProducts)
 app.get('/products/:id', getSingleProduct)
 app.get('/productForm', getProductForm)
 app.post('/productForm', postProductForm)
+
+app.get('/customers', getCustomers)
