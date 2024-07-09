@@ -14,7 +14,7 @@
         </h3>
         <select name="customerID" id="customerID">
             {% for customer in customers %}
-            <option value="{{customer.customerID}}">{{customer.customerName}}</option>
+            <option value="{{customer.customerID}}">Name: {{customer.customerName}}, ID: {{customer.customerID}}</option>
             {% endfor %}
         </select>
 
