@@ -2,7 +2,7 @@ import express from "express";
 import nunjucks from "nunjucks";
 //import bodyParser from "body-parser";
 
-import { getAllOrders, getSingleOrder } from "../controllers/OrderController"
+import { getAllOrders, getSingleOrder, getOrderForm, postOrderForm } from "../controllers/OrderController"
 import { dateFilter } from "../filters/DateFilters"
 import { getAllProducts, getProductForm, getSingleProduct, postProductForm } from "../controllers/ProductController"
 
@@ -32,6 +32,8 @@ app.get('/', async (req: express.Request, res: express.Response) => {
 });
 
 app.get('/orders', getAllOrders)
+app.get('/orderForm', getOrderForm)
+app.post('/orderForm', postOrderForm)
 app.get('/orders/:id', getSingleOrder)
 app.get('/products', getAllProducts)
 app.get('/products/:id', getSingleProduct)

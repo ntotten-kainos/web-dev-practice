@@ -1,4 +1,4 @@
 export type OrderResponse = {
-    orderId: Number,
+    orderID: Number,
     orderDate: Date
 }
