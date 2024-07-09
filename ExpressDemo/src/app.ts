@@ -1,4 +1,4 @@
-import { getCustomerForm, getCustomers, postCustomerForm } from './../controllers/CustomerController';
+import { getCustomerByID, getCustomerForm, getCustomers, postCustomerForm } from './../controllers/CustomerController';
 import express from "express";
 import nunjucks from "nunjucks";
 //import bodyParser from "body-parser";
@@ -42,5 +42,6 @@ app.get('/productForm', getProductForm)
 app.post('/productForm', postProductForm)
 
 app.get('/customers', getCustomers)
+app.get('/customers/:id', getCustomerByID)
 app.get('/customerForm', getCustomerForm)
 app.post('/customerForm', postCustomerForm)

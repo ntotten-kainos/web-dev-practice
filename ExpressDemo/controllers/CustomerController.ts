@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import { createCustomer, getAllCustomers } from '../services/CustomerService';
+import { createCustomer, getAllCustomers, getCustomer } from '../services/CustomerService';
 import express from "express";
 
 export const getCustomers = async (req:express.Request, res:express.Response): Promise<void> => {
@@ -18,4 +18,8 @@ export const postCustomerForm = async (req:express.Request, res:express.Response
         res.locals.errormessage = e.message;
         res.render('customerForm.html', req.body);
     }
+}
+
+export const getCustomerByID = async (req:express.Request, res:express.Response): Promise<void> => {
+    res.render('customerDetails.html', { customer: await getCustomer(req.params.id) });
 }

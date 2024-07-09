@@ -21,3 +21,13 @@ export const createCustomer = async (customer: CustomerRequest) : Promise<Number
         throw new Error('Unable to create Customer');
     }
 }
+
+export const getCustomer = async (id: String): Promise<Customer> => {
+    try {
+        const response: AxiosResponse = await axios.get("http://localhost:8080/customer-api/" + id);
+        return response.data;
+    } catch(e) {
+        console.log(e);
+        throw new Error('Failed to get customer with ID: ' + id);
+    }
+}
