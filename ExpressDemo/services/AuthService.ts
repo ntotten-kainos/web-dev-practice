@@ -11,7 +11,7 @@ export const getToken = async (loginRequest: LoginRequest): Promise<String> => {
     }    
 }
 
-export const registerUser = async (loginRequest: LoginRequest): Promise<String> => {
+export const registerUser = async (loginRequest: LoginRequest): Promise<void> => {
     try {
         const response: AxiosResponse = await axios.post("http://localhost:8080/api/auth/register", loginRequest);
         return response.data;

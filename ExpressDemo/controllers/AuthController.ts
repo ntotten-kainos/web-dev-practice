@@ -21,7 +21,7 @@ export const getRegistrationForm = async (req:express.Request, res:express.Respo
 
 export const postRegistrationForm = async (req:express.Request, res:express.Response): Promise<void> => {
     try {
-        const username = await registerUser(req.body);
+        await registerUser(req.body);
         res.redirect('/loginForm');
     } catch (error) {
         res.locals.errormessage = error.message;
