@@ -8,6 +8,9 @@
 </head>
 <body>
     <form class="form" action="/customerForm" method="post">
+        {% if errormessage %}
+            <h3>{{ errormessage }}</h3>
+        {% endif %} 
         <h3>
             <label for="customerName">Name</label>
         </h3>
